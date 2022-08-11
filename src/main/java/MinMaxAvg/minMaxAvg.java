@@ -4,10 +4,10 @@ public class minMaxAvg {
 
     public static void main(String[] args) {
 
-        int n = 10;
+        int n = 20;
         double[] array = new double[n];
         for (int i = 0; i < array.length; i++) {
-            array[i] = Math.random();
+            array[i] = 10 * Math.random();
         }
 
         double max = array[0];
