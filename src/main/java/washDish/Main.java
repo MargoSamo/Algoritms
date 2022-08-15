@@ -9,10 +9,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Plate> plates = new ArrayList<>();
+        List<Plate> plates = new MariaArrayList<>();
         for(int i = 0; i < 134; i++) {
             plates.add(new Plate());
         }
+
+        Dishwasher dishwasher = new Dishwasher();
+        dishwasher.putPlates(plates);
+        int numberStacks = dishwasher.countPlates();
+        System.out.println(numberStacks);
 
     }
 

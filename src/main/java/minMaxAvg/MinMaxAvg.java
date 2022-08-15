@@ -1,6 +1,6 @@
-package MinMaxAvg;
+package minMaxAvg;
 
-public class minMaxAvg {
+public class MinMaxAvg {
 
     public static void main(String[] args) {
 
