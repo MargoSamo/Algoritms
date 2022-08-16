@@ -1,6 +1,5 @@
-package washDish;
+package washdish;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class Dishwasher {

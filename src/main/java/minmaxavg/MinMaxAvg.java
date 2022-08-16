@@ -1,4 +1,4 @@
-package minMaxAvg;
+package minmaxavg;
 
 public class MinMaxAvg {
 

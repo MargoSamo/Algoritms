@@ -12,4 +12,7 @@ public class Leg {
         return pain;
     }
 
+    public void heal() {
+        pain = false;
+    }
 }

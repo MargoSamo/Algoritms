@@ -1,4 +1,4 @@
-package washDish;
+package washdish;
 
 public class Plate {
 }
