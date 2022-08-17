@@ -1,7 +1,10 @@
 package cry;
 
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 
+@Service
 public class CryCounterService {
 
     HashMap<String, Integer> nameToCrySumMap = new HashMap<>();
@@ -17,6 +20,10 @@ public class CryCounterService {
     }
 
     public int getSumCry(String name) {
-       return nameToCrySumMap.get(name);
+        var nameToCry = nameToCrySumMap.get(name);
+        if (nameToCry == null) {
+            return nameToCrySumMap.put(name, 0);
+        }
+        return nameToCrySumMap.get(name);
     }
 }
