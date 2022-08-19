@@ -1,20 +1,29 @@
 package leg;
 
 public class LegStepperThread extends Thread {
-    private Leg leg;
+    private final Leg leg;
+    private final Leg otherLeg;
+    int i = 0;
 
-    public LegStepperThread(Leg leg) {
+    public LegStepperThread(Leg leg, Leg otherLeg) {
         this.leg = leg;
+        this.otherLeg = otherLeg;
     }
 
     @Override
     public void run() {
-        while (true) {
-            leg.step();
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+        while (i < 1000) {
+            i++;
+            synchronized (leg) {
+                try {
+                    synchronized (otherLeg) {
+                        otherLeg.notify();
+                    }
+                    leg.step();
+                    leg.wait();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
     }

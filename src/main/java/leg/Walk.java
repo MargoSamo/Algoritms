@@ -6,8 +6,8 @@ public class Walk {
         Leg leftLeg = new Leg(Side.LEFT);
         Leg rightLeg = new Leg(Side.RIGHT);
 
-        LegStepperThread leftThread = new LegStepperThread(leftLeg);
-        LegStepperThread rightThread = new LegStepperThread(rightLeg);
+        LegStepperThread leftThread = new LegStepperThread(leftLeg, rightLeg);
+        LegStepperThread rightThread = new LegStepperThread(rightLeg, leftLeg);
 
         leftThread.start();
         rightThread.start();

@@ -11,6 +11,7 @@ public class Main {
 
         new Walk().startWalking();
 
+        Incrementor incrementor = new Incrementor();
 
 
     }
