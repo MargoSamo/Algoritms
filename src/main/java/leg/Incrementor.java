@@ -4,7 +4,7 @@ public class Incrementor {
 
     private int a = 0;
 
-    public void increment() {
+    public synchronized void increment() {
         a++;
     }
 

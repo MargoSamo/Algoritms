@@ -3,7 +3,7 @@ package leg;
 public class LegStepperThread extends Thread {
     private final Leg leg;
     private final Leg otherLeg;
-    int i = 0;
+        int i = 0;
 
     public LegStepperThread(Leg leg, Leg otherLeg) {
         this.leg = leg;
